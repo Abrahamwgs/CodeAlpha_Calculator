@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  background:
+    linear-gradient(135deg,#0f172a,#1e293b,#111827);
+  overflow:hidden;
+}
+
+body::before{
+  content:'';
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:#00f5ff;
+  border-radius:50%;
+  top:-100px;
+  left:-100px;
+  filter:blur(120px);
+}
+
+body::after{
+  content:'';
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:#ff00c8;
+  border-radius:50%;
+  bottom:-100px;
+  right:-100px;
+  filter:blur(120px);
+}
+
+.calculator{
+  position:relative;
+  width:350px;
+  padding:25px;
+  border-radius:25px;
+  backdrop-filter:blur(20px);
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.1);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.37);
+  z-index:1;
+}
+
+#display{
+  width:100%;
+  height:80px;
+  border:none;
+  outline:none;
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:20px;
+  background:rgba(255,255,255,0.08);
+  color:#fff;
+  font-size:2.2rem;
+  text-align:right;
+  box-shadow:
+    inset 0 0 10px rgba(255,255,255,0.05);
+}
+
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+button{
+  height:65px;
+  border:none;
+  border-radius:18px;
+  font-size:1.2rem;
+  font-weight:500;
+  cursor:pointer;
+  color:#fff;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  transition:0.25s ease;
+  box-shadow:
+    0 4px 15px rgba(0,0,0,0.2);
+}
+
+button:hover{
+  transform:translateY(-3px) scale(1.03);
+  background:rgba(255,255,255,0.15);
+}
+
+button:active{
+  transform:scale(0.95);
+}
+
+.equal{
+  grid-row:span 2;
+  background:linear-gradient(135deg,#ff8a00,#ff2d55);
+}
+
+.equal:hover{
+  opacity:0.9;
+}
+
+.operator{
+  color:#00f5ff;
+}
+
+.clear{
+  color:#ff4d6d;
+}
+
+.zero{
+  grid-column:span 2;
+}
+
+@media(max-width:400px){
+
+  .calculator{
+    width:95%;
+    padding:20px;
+  }
+
+  button{
+    height:60px;
+  }
+
+  #display{
+    height:70px;
+    font-size:1.8rem;
+  }
+
+}
