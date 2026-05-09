@@ -15,7 +15,7 @@ A premium modern calculator built using HTML, CSS, and JavaScript.
 - JavaScript
 
 ## Live Demo
-Add your GitHub Pages link here
+https://abrahamwgs.github.io/CodeAlpha_Calculator/
 
 ## Author
 Abraham Worku
